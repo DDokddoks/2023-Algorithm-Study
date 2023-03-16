@@ -7,7 +7,4 @@ def getDivCount(n, limit, power):
     return cnt
 
 def solution(number, limit, power):
-    answer = 0
-    for n in range(1, number+1):
-        answer += getDivCount(n, limit, power)
-    return answer
+    return sum(getDivCount(i, limit, power) for i in range(1, number+1))
