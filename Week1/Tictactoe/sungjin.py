@@ -1,5 +1,5 @@
 def solution(board):
-    answer = 0
+    answer = 1
     XCount = 0
     OCount = 0
     Xline = 0
@@ -33,13 +33,18 @@ def solution(board):
     
     #X가 더 많거나 O가 X보다 2개 이상 차이나면
     if XCount > OCount:
-        return 0
+        answer = 0
     elif OCount - XCount >= 2:
-        return 0
+        answer = 0
     #빙고했는데 하나더 놨을 때
 
     #하나 놨을 때 여러줄 완성될수 있음
-    if Oline > 0 and 
+    if Oline > 0 and Xline:
+        answer = 0
+    if OCount == XCount and Oline > 0 and Xline == 0:
+        answer = 0
+    if OCount > XCount and Oline == 0 and Xline > 0:
+        answer = 0
 
     return answer
 
