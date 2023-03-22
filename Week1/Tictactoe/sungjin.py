@@ -8,24 +8,24 @@ def solution(board):
     for i in range(3):
         XCount += board[i].count('X')
         OCount += board[i].count('O')
-        if board[i][0] == board[i][1] and board[i][1] == board[i][2]:
+        if board[i][0] == board[i][1] == board[i][2]:
             if board[i][0] == 'X':
                 Xline += 1
             elif board[i][0] == 'O':
                 Oline += 1
-        if board[0][i] == board[1][i] and board[1][i] == board[2][i]:
+        if board[0][i] == board[1][i] == board[2][i]:
             if board[0][i] == 'X':
                 Xline += 1
             elif board[0][i] == 'O':
                 Oline += 1
         
     #대각선 확인
-    if board[0][0] == board[1][1] and board[1][1] == board[2][2]:
+    if board[0][0] == board[1][1] == board[2][2]:
         if board[0][0] == 'X':
             Xline += 1
         elif board[0][0] == 'O':
             Oline += 1
-    if board[0][2] == board [1][1] and board[1][1] == board[2][0]:
+    if board[0][2] == board [1][1] == board[2][0]:
         if board[0][2] == 'X':
             Xline += 1
         elif board[0][2] == 'O':
@@ -36,15 +36,10 @@ def solution(board):
         return 0
     elif OCount - XCount >= 2:
         return 0
-    
+    #빙고했는데 하나더 놨을 때
+
     #하나 놨을 때 여러줄 완성될수 있음
-    if Oline == 0 and Xline == 0:
-        answer = 1
-    if Oline > 0 and Xline == 0:
-        answer = 1
-    if Oline == 0 and Xline > 0 and (XCount ==0 and OCount ==0):
-        answer = 1
-    answer = 0
+    if Oline > 0 and 
 
     return answer
 
