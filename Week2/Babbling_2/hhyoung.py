@@ -3,14 +3,17 @@ def solution(babbling):
     answer = 0
     spell = ["aya", "ye", "woo", "ma"]
 
-    answer=len(babbling)
+    exWord=""
     for i in range(len(babbling)):
         for word in spell:
-            babbling[i]=babbling[i].replace(word,'',1)
-                
-                
-    print(babbling)
-    answer-=len(babbling)  
+            if babbling[i].find(word, 0, len(word)):
+                if word==exWord:
+                    break
+                babbling[i]=babbling[i].replace(word,"",1)
+                exWord=word
+    if word in babbling:
+        if word=="":
+            answer+=1
     return answer
 
 def main():
