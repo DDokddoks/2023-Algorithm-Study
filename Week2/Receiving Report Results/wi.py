@@ -7,25 +7,4 @@ def solution(id_list, report, k):
     for u, r in report: 
         if reported[r] >= k: answer[id_list.index(u)] += 1
 
-    return answer~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
--- INSERT --
-    
-    
-   
-
-  
-
-
-
-
+    return answer
