@@ -1,6 +1,6 @@
 def to_day(date, vaild = 0):
     year, month, day = map(int, date.split("."))
-    return int(year)*28*12 + int(month + vaild) * 28 + int(day)
+    return int(year )* 28 * 12 + int(month + vaild) * 28 + int(day)
 
 def solution(today, terms, privacies):
     terms = {t[0]: int(t[2:]) for t in terms} 
