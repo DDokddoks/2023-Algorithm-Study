@@ -1,5 +1,3 @@
-# 1118
-from collections import deque
 def solution(ingredient):
     answer = ham = 0
     ham_set = [1,2,3,1]
@@ -15,20 +13,3 @@ def solution(ingredient):
                     list_ham.pop()
 
     return answer
-
-
-
-
-
-
-
-
-
-
-
-
-def main():
-    solution([2, 1, 1, 2, 3, 1, 2, 3, 1])
-
-if __name__=="__main__":
-    main()
