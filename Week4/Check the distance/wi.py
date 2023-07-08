@@ -1,5 +1,5 @@
 def is_valid(x, y):
-    return x >= 0 and x < 5 and y >= 0 and y < 5
+    return 0 <= x < 5 and 0 <= y < 5
 
 
 def check(place):
