@@ -7,11 +7,11 @@ def check(place):
     
     for i, p in enumerate(place):
         for j, e in enumerate(p):
-            if e == "P":
+            if e == 'P':
                 if any([place[i+dx][j+dy] == 'P' for dx, dy in move if is_valid(i+dx, j+dy)]): 
                     return 0
             
-            elif e == "O":
+            elif e == 'O':
                 if [place[i+dx][j+dy] == 'P' for dx, dy in move if is_valid(i+dx, j+dy)].count(True) > 1: 
                     return 0
     
