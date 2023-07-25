@@ -3,7 +3,7 @@ def is_valid(rotated):
     
     for p in rotated:
         stk.append(p)
-        while (len(stk) > 1 and 
+        if (len(stk) > 1 and 
             ((stk[-2] == '(' and stk[-1] == ')') or
              (stk[-2] == '{' and stk[-1] == '}') or
              (stk[-2] == '[' and stk[-1] == ']'))):
